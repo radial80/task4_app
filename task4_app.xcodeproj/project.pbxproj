@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		48D1BF812AA240C0001204CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1BF802AA240C0001204CE /* AppDelegate.swift */; };
 		48D1BF832AA240C0001204CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1BF822AA240C0001204CE /* SceneDelegate.swift */; };
-		48D1BF852AA240C0001204CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1BF842AA240C0001204CE /* ViewController.swift */; };
+		48D1BF852AA240C0001204CE /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1BF842AA240C0001204CE /* WeatherViewController.swift */; };
 		48D1BF882AA240C0001204CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D1BF862AA240C0001204CE /* Main.storyboard */; };
 		48D1BF8A2AA240C1001204CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D1BF892AA240C1001204CE /* Assets.xcassets */; };
 		48D1BF8D2AA240C1001204CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D1BF8B2AA240C1001204CE /* LaunchScreen.storyboard */; };
+		48D1BF952AA25381001204CE /* OpenWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1BF942AA25381001204CE /* OpenWeather.swift */; };
+		48D1BF982AA25F55001204CE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1BF972AA25F55001204CE /* NetworkService.swift */; };
+		48D1BF9C2AA266D1001204CE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 48D1BF9B2AA266D1001204CE /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48D1BF7D2AA240C0001204CE /* task4_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task4_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D1BF802AA240C0001204CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48D1BF822AA240C0001204CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		48D1BF842AA240C0001204CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48D1BF842AA240C0001204CE /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		48D1BF872AA240C0001204CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48D1BF892AA240C1001204CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48D1BF8C2AA240C1001204CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48D1BF8E2AA240C1001204CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D1BF942AA25381001204CE /* OpenWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeather.swift; sourceTree = "<group>"; };
+		48D1BF972AA25F55001204CE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D1BF9C2AA266D1001204CE /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,33 @@
 		48D1BF7F2AA240C0001204CE /* task4_app */ = {
 			isa = PBXGroup;
 			children = (
+				48D1BF992AA25F7D001204CE /* Model */,
+				48D1BF962AA25F42001204CE /* Services */,
 				48D1BF802AA240C0001204CE /* AppDelegate.swift */,
 				48D1BF822AA240C0001204CE /* SceneDelegate.swift */,
-				48D1BF842AA240C0001204CE /* ViewController.swift */,
+				48D1BF842AA240C0001204CE /* WeatherViewController.swift */,
 				48D1BF862AA240C0001204CE /* Main.storyboard */,
 				48D1BF892AA240C1001204CE /* Assets.xcassets */,
 				48D1BF8B2AA240C1001204CE /* LaunchScreen.storyboard */,
 				48D1BF8E2AA240C1001204CE /* Info.plist */,
 			);
 			path = task4_app;
+			sourceTree = "<group>";
+		};
+		48D1BF962AA25F42001204CE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				48D1BF972AA25F55001204CE /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		48D1BF992AA25F7D001204CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48D1BF942AA25381001204CE /* OpenWeather.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +107,9 @@
 			dependencies = (
 			);
 			name = task4_app;
+			packageProductDependencies = (
+				48D1BF9B2AA266D1001204CE /* Kingfisher */,
+			);
 			productName = task4_app;
 			productReference = 48D1BF7D2AA240C0001204CE /* task4_app.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 48D1BF742AA240BF001204CE;
+			packageReferences = (
+				48D1BF9A2AA266D1001204CE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 48D1BF7E2AA240C0001204CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48D1BF852AA240C0001204CE /* ViewController.swift in Sources */,
+				48D1BF982AA25F55001204CE /* NetworkService.swift in Sources */,
+				48D1BF852AA240C0001204CE /* WeatherViewController.swift in Sources */,
 				48D1BF812AA240C0001204CE /* AppDelegate.swift in Sources */,
+				48D1BF952AA25381001204CE /* OpenWeather.swift in Sources */,
 				48D1BF832AA240C0001204CE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48D1BF9A2AA266D1001204CE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48D1BF9B2AA266D1001204CE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48D1BF9A2AA266D1001204CE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48D1BF752AA240BF001204CE /* Project object */;
 }
